@@ -1,11 +1,11 @@
 {
 	"Tasks": [
 		"default",
-		"publish-geeGo"
+		"publish-beeGo"
 	],
 	"PackageVersion": "0.0.1",
 	"TaskSettings": {
-		"publish-geeGo": {
+		"publish-beeGo": {
 			"owner": "beego",
 			"repository": "bee"
 		}

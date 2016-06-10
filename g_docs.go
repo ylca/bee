@@ -41,8 +41,8 @@ import (
 	"encoding/json"
 	"strings"
 
-	"geeGo/astaxie/beego"
-	"geeGo/astaxie/beego/swagger"
+	"beeGo/astaxie/beego"
+	"beeGo/astaxie/beego/swagger"
 )
 
 const (
@@ -273,7 +273,7 @@ func analisyscontrollerPkg(localName, pkgpath string) {
 		pps := strings.Split(pkgpath, "/")
 		importlist[pps[len(pps)-1]] = pkgpath
 	}
-	if pkgpath == "geeGo/astaxie/beego" {
+	if pkgpath == "beeGo/astaxie/beego" {
 		return
 	}
 	gopath := os.Getenv("GOPATH")

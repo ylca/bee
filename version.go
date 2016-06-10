@@ -53,7 +53,7 @@ func getbeegoVersion() string {
 	}
 	wgopath := path.SplitList(gopath)
 	for _, wg := range wgopath {
-		wg, _ = path.EvalSymlinks(path.Join(wg, "src", "geeGo", "astaxie", "beego"))
+		wg, _ = path.EvalSymlinks(path.Join(wg, "src", "beeGo", "astaxie", "beego"))
 		filename := path.Join(wg, "beego.go")
 		_, err := os.Stat(filename)
 		if err != nil {
@@ -84,5 +84,5 @@ func getbeegoVersion() string {
 		}
 
 	}
-	return "you don't install beego,install first: geeGo/astaxie/beego"
+	return "you don't install beego,install first: beeGo/astaxie/beego"
 }

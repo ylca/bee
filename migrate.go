@@ -372,11 +372,11 @@ const (
 import(
 	"os"
 
-	"geeGo/astaxie/beego/orm"
-	"geeGo/astaxie/beego/migration"
+	"beeGo/astaxie/beego/orm"
+	"beeGo/astaxie/beego/migration"
 
-	_ "geeGo/go-sql-driver/mysql"
-	_ "geeGo/lib/pq"
+	_ "beeGo/go-sql-driver/mysql"
+	_ "beeGo/lib/pq"
 )
 
 func init(){

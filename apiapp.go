@@ -72,7 +72,7 @@ import (
 	_ "{{.Appname}}/docs"
 	_ "{{.Appname}}/routers"
 
-	"geeGo/astaxie/beego"
+	"beeGo/astaxie/beego"
 )
 
 func main() {
@@ -90,8 +90,8 @@ import (
 	_ "{{.Appname}}/docs"
 	_ "{{.Appname}}/routers"
 
-	"geeGo/astaxie/beego"
-	"geeGo/astaxie/beego/orm"
+	"beeGo/astaxie/beego"
+	"beeGo/astaxie/beego/orm"
 	{{.DriverPkg}}
 )
 
@@ -121,7 +121,7 @@ package routers
 import (
 	"{{.Appname}}/controllers"
 
-	"geeGo/astaxie/beego"
+	"beeGo/astaxie/beego"
 )
 
 func init() {
@@ -290,7 +290,7 @@ import (
 	"{{.Appname}}/models"
 	"encoding/json"
 
-	"geeGo/astaxie/beego"
+	"beeGo/astaxie/beego"
 )
 
 // Operations about object
@@ -383,7 +383,7 @@ import (
 	"{{.Appname}}/models"
 	"encoding/json"
 
-	"geeGo/astaxie/beego"
+	"beeGo/astaxie/beego"
 )
 
 // Operations about Users
@@ -508,8 +508,8 @@ import (
 	"path/filepath"
 	_ "{{.Appname}}/routers"
 
-	"geeGo/astaxie/beego"
-	. "geeGo/smartystreets/goconvey/convey"
+	"beeGo/astaxie/beego"
+	. "beeGo/smartystreets/goconvey/convey"
 )
 
 func init() {
@@ -584,9 +584,9 @@ func createapi(cmd *Command, args []string) int {
 		maingoContent := strings.Replace(apiMainconngo, "{{.Appname}}", packpath, -1)
 		maingoContent = strings.Replace(maingoContent, "{{.DriverName}}", string(driver), -1)
 		if driver == "mysql" {
-			maingoContent = strings.Replace(maingoContent, "{{.DriverPkg}}", `_ "geeGo/go-sql-driver/mysql"`, -1)
+			maingoContent = strings.Replace(maingoContent, "{{.DriverPkg}}", `_ "beeGo/go-sql-driver/mysql"`, -1)
 		} else if driver == "postgres" {
-			maingoContent = strings.Replace(maingoContent, "{{.DriverPkg}}", `_ "geeGo/lib/pq"`, -1)
+			maingoContent = strings.Replace(maingoContent, "{{.DriverPkg}}", `_ "beeGo/lib/pq"`, -1)
 		}
 		writetofile(path.Join(apppath, "main.go"),
 			strings.Replace(

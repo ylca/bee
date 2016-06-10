@@ -64,9 +64,9 @@ var hproseMaingo = `package main
 
 import (
 	"{{.Appname}}/models"
-	"geeGo/hprose/hprose-go/hprose"
+	"beeGo/hprose/hprose-go/hprose"
 
-	"geeGo/astaxie/beego"
+	"beeGo/astaxie/beego"
 )
 
 func main() {
@@ -82,10 +82,10 @@ var hproseMainconngo = `package main
 
 import (
 	"{{.Appname}}/models"
-	"geeGo/hprose/hprose-go/hprose"
+	"beeGo/hprose/hprose-go/hprose"
 
-	"geeGo/astaxie/beego"
-	"geeGo/astaxie/beego/orm"
+	"beeGo/astaxie/beego"
+	"beeGo/astaxie/beego/orm"
 	{{.DriverPkg}}
 )
 
@@ -287,9 +287,9 @@ func createhprose(cmd *Command, args []string) int {
 		maingoContent = strings.Replace(maingoContent, "{{.DriverName}}", string(driver), -1)
 		maingoContent = strings.Replace(maingoContent, "{{HproseFunctionList}}", strings.Join(hproseAddFunctions, ""), -1)
 		if driver == "mysql" {
-			maingoContent = strings.Replace(maingoContent, "{{.DriverPkg}}", `_ "geeGo/go-sql-driver/mysql"`, -1)
+			maingoContent = strings.Replace(maingoContent, "{{.DriverPkg}}", `_ "beeGo/go-sql-driver/mysql"`, -1)
 		} else if driver == "postgres" {
-			maingoContent = strings.Replace(maingoContent, "{{.DriverPkg}}", `_ "geeGo/lib/pq"`, -1)
+			maingoContent = strings.Replace(maingoContent, "{{.DriverPkg}}", `_ "beeGo/lib/pq"`, -1)
 		}
 		writetofile(path.Join(apppath, "main.go"),
 			strings.Replace(

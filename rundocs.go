@@ -27,14 +27,14 @@ var cmdRundocs = &Command{
 	UsageLine: "rundocs [-isDownload=true] [-docport=8888]",
 	Short:     "rundocs will run the docs server,default is 8089",
 	Long: `
--d meaning will download the docs file from geeGo
+-d meaning will download the docs file from beeGo
 -p meaning server the Server on which port, default is 8089
 
 `,
 }
 
 const (
-	swaggerlink = "https://geeGo/beego/swagger/archive/v1.zip"
+	swaggerlink = "https://beeGo/beego/swagger/archive/v1.zip"
 )
 
 type docValue string

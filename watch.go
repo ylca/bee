@@ -130,7 +130,7 @@ func Autobuild(files []string, isgenerate bool) {
 	}
 
 	var err error
-	// For applications use full import path like "geeGo/.../.."
+	// For applications use full import path like "beeGo/.../.."
 	// are able to use "go install" to reduce build time.
 	if conf.GoInstall || conf.Gopm.Install {
 		icmd := exec.Command("go", "list", "./...")

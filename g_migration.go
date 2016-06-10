@@ -62,7 +62,7 @@ func generateMigration(mname, upsql, downsql, curpath string) {
 const MIGRATION_TPL = `package main
 
 import (
-	"geeGo/astaxie/beego/migration"
+	"beeGo/astaxie/beego/migration"
 )
 
 // DO NOT MODIFY
